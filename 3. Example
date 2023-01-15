@@ -1,0 +1,34 @@
+using System;
+
+namespace AtmProjesi
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Atm'ye Hoşgeldiniz.Lütfen aşağıdan yapmak istediğiniz işlemi tuşlayınız: ");
+            int bakiye = 5000;
+            Console.WriteLine("1.Para Çek");
+            Console.WriteLine("2.Para Yatır");
+            Console.WriteLine("3.Bakiye Öğren");
+            int secim = Convert.ToInt32(Console.ReadLine());
+            if (secim == 1)
+            {
+                Console.WriteLine("Çekmek istediğiniz tutarı giriniz: ");
+                int cekilenPara = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Çekilen tutar: " + cekilenPara + " TL'dir.Kalan bakiyeniz " + (bakiye - cekilenPara));
+            }
+            else if (secim == 2)
+            {
+                Console.WriteLine("Lütfen yatırmak istediğiniz tutarı girinin: ");
+                int yatirilanTutar = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Yatırmak istediğiniz tutar: " + yatirilanTutar + " liradır, yeni bakiyeniz " + (bakiye + yatirilanTutar) + " liradır");
+            }
+            else if (secim == 3)
+            {
+                Console.WriteLine("Bakiyeniz " + bakiye + " liradır.İyi günlerde kullanın.");
+            }
+                
+        }
+    }
+}
