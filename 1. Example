@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("İlk Sayıyı girin: ");
+            int ilksayi = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("İkinci Sayıyı Girin: ");
+            int ikincisayi = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Geçme Notunu Yazın: ");
+            int gecmenotu = Convert.ToInt32(Console.ReadLine());
+
+            int ortalama = Convert.ToInt32((ilksayi * 0.40) + (ikincisayi * 0.60));
+            if (ortalama > gecmenotu )
+            {
+                Console.WriteLine("Tebrikler dersi geçtiniz");
+                Console.ReadLine();
+
+            }
+            else if (ortalama < gecmenotu)
+            {
+                Console.WriteLine("Maalesef dersi geçemediniz");
+                Console.ReadLine();
+
+            }
+            else
+            {
+                Console.WriteLine("Notunuz tam geçme notuna eşit o yüzden dersi geçtiniz");
+                Console.ReadLine();
+            }
+        }
+    }
+}
