@@ -17,18 +17,21 @@ namespace AtmProjesi
                 Console.WriteLine("Çekmek istediğiniz tutarı giriniz: ");
                 int cekilenPara = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Çekilen tutar: " + cekilenPara + " TL'dir.Kalan bakiyeniz " + (bakiye - cekilenPara));
+                Console.ReadLine();
             }
             else if (secim == 2)
             {
                 Console.WriteLine("Lütfen yatırmak istediğiniz tutarı giriniz: ");
                 int yatirilanTutar = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Yatırmak istediğiniz tutar: " + yatirilanTutar + " liradır, yeni bakiyeniz " + (bakiye + yatirilanTutar) + " liradır");
+                Console.ReadLine();
             }
             else if (secim == 3)
             {
                 Console.WriteLine("Bakiyeniz " + bakiye + " liradır.İyi günlerde kullanın.");
+                Console.ReadLine();
             }
-                
+
         }
     }
 }
